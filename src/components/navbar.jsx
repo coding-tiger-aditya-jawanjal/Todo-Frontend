@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="flex h-full items-center px-10 justify-between">
-      <div className="flex items-center">
+      <div className=" items-center hidden md:flex">
         <Image
           src={"/Logo.jpg"}
           alt="Logo"
@@ -15,13 +15,6 @@ const Navbar = () => {
         />
         <h3 className=" text-4xl ml-5">Brand</h3>
       </div>
-      <input
-        type="search"
-        name="search"
-        id="search"
-        placeholder="Search here..."
-        className=" w-80 h-10 p-1 border-blue-400 border-2 outline-none"
-      />
       <div className="flex">
         {
           [

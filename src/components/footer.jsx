@@ -2,8 +2,8 @@
 
 const Footer = () => {
   return (
-    <div >
-      This is Footer
+    <div className="flex justify-center items-center h-full" >
+      <div>All the Rights are Reserved. Copyright &copy;</div>
     </div>
   )
 }
