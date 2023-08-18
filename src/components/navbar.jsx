@@ -23,7 +23,7 @@ const Navbar = () => {
             ["Contact","/"],
           ].map(([title , url] )=>{
             return(
-              <Link href={url} className="mr-5 text-xl">{title}</Link>
+              <Link href={url} key={title} className="mr-5 text-xl">{title}</Link>
            ) })
         }
       </div>
