@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    api: {
-        externalResolver: true,
-      },
-}
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = nextConfig;
