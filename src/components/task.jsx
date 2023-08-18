@@ -7,7 +7,18 @@ const AddTask = () => {
   const [desc, setDesc] = useState();
 
   const handleSubmit = async () => {
-    console.log(title, desc);
+    const res = await fetch('pages/api/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: `Test`,
+        desc: `test`,
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
   };
 
   return (
@@ -35,12 +46,11 @@ const AddTask = () => {
       <button
         type="submit"
         className="mt-5 bg-green-300 hover:bg-slate-200 hover:cursor-pointer h-10"
-        onClick={() => handleSubmit()}
+        onClick={handleSubmit}
       >
         Add Task
       </button>
     </div>
   );
 };
-
 export default AddTask;
